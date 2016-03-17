@@ -1,0 +1,1 @@
+function c(a,b){return 0==a?b+1:0==b?c(a-1,1):c(a-1,c(a,b-1))}function d(a){return 2>a?1:d(a-2)+d(a-1)}function e(a,b,g){return b>=a?g:e(e(a-1,b,g),e(b-1,g,a),e(g-1,a,b))}for(var f=0,h=3;5>=h;h++)f+=c(3,h),f+=d(17+h),f+=e(3*h+3,2*h+2,h+1);if(57775!=f)throw"ERROR: bad result: expected 57775 but got "+f;

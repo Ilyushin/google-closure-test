@@ -1,0 +1,1 @@
+var a,b,c=0;for(a=0;500>a;a++)for(b=0;256>b;b++)var d=c,e=void 0,e=3&59796>>(b<<1&14),e=e+(3&59796>>(b>>2&14)),e=e+(3&59796>>(b>>5&6)),c=d+e;sum=c;if(512E3!=sum)throw"ERROR: bad result: expected 512000 but got "+sum;

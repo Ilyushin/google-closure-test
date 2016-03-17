@@ -1,0 +1,2 @@
+var a;a:{for(var b=0,c=Array(8),d=Array(8),e=Array(8),f=Array(8),g=0,h=0;8>h;h++)d[h]=h;for(var k=8;;){if(30>b){for(h=0;8>h;h++);b++}for(;1!=k;)e[k-1]=k,k--;if(0!=d[0]&&7!=d[7]){for(h=0;8>h;h++)c[h]=d[h];for(var l=0,m;0!=(m=c[0]);){for(var n=m+1>>1,h=0;h<n;h++){var p=c[h];c[h]=c[m-h];c[m-h]=p}l++}if(l>g)for(g=l,h=0;8>h;h++)f[h]=d[h]}for(;;){if(8==k){a=g;break a}for(var q=d[0],h=0;h<k;){var r=h+1;d[h]=d[r];h=r}d[k]=q;--e[k];if(0<e[k])break;k++}}}
+if(22!=a)throw"ERROR: bad result: expected 22 but got "+a;

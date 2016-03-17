@@ -1,0 +1,1 @@
+for(var a=0,b=1024;16384>=b;b*=2){var c=a,d=b;a2=a3=a4=a5=a6=a7=a8=a9=0;for(var e=-1,f=k3=sk=ck=0,g=1;g<=d;g++)f=g*g,k3=f*g,sk=Math.sin(g),ck=Math.cos(g),e=-e,a2+=Math.pow(g,-.5),a3+=1/(g*(g+1)),a4+=1/(k3*sk*sk),a5+=1/(k3*ck*ck),a6+=1/g,a7+=1/f,a8+=e/g,a9+=e/(2*g-1);a=c+(a6+a7+a8+a9)}if(60.08994194659945!=a)throw"ERROR: bad result: expected 60.08994194659945 but got "+a;

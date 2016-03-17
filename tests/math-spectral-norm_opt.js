@@ -1,0 +1,2 @@
+function a(d,l){for(var b=0;b<d.length;++b){for(var e=0,c=0;c<d.length;++c)e+=1/((b+c)*(b+c+1)/2+b+1)*d[c];l[b]=e}}function f(d,l){for(var b=0;b<d.length;++b){for(var e=0,c=0;c<d.length;++c)e+=1/((c+b)*(c+b+1)/2+c+1)*d[c];l[b]=e}}for(var g=0,h=6;48>=h;h*=2){for(var k=g,m=h,n=void 0,p=[],q=[],r=[],t=0,u=0,n=0;n<m;++n)p[n]=1,q[n]=r[n]=0;for(n=0;10>n;++n){var v=q,w=r;a(p,w);f(w,v);var x=p,y=r;a(q,y);f(y,x)}for(n=0;n<m;++n)u+=p[n]*q[n],t+=q[n]*q[n];g=k+Math.sqrt(u/t)}
+if(5.086694231303284!=g)throw"ERROR: bad result: expected 5.086694231303284 but got "+g;

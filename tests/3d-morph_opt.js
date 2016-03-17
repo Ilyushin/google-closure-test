@@ -1,0 +1,1 @@
+for(var a=[],b=0;43200>b;++b)a[b]=0;for(b=0;15>b;++b)for(var c=a,d=8*Math.PI/120,e=Math.sin,f=-(50*e(b/15*Math.PI*2)),g=0;120>g;++g)for(var h=0;120>h;++h)c[3*(120*g+h)+1]=e((h-1)*d)*-f;for(b=testOutput=0;120>b;b++)testOutput+=a[3*(120*b+b)+1];a=null;if(1E-13<=Math.abs(testOutput))throw"Error: bad test output: expected magnitude below 1.0E-13 but got "+testOutput;

@@ -1,0 +1,1 @@
+for(var a,b=4;4>=b;b++){for(var c=Array((1E4<<b)+31>>5),d=c,e=void 0,f=0,g=1E4<<b,h=g+31>>5,e=0;e<h;e++)d[e]=4294967295;for(e=2;e<g;e++)if(d[e>>5]&1<<(e&31)){for(var k=e+e;k<g;k+=e)d[k>>5]&=~(1<<(k&31));f++}}a=c;for(var l=0,m=0;m<a.length;++m)l+=a[m];if(-1286749544853!=l)throw"ERROR: bad result: expected -1286749544853 but got "+l;

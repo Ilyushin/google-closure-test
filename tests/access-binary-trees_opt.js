@@ -1,0 +1,1 @@
+function c(a,b,m){this.left=a;this.right=b;this.item=m}function d(a){return null==a.left?a.item:a.item+d(a.left)-d(a.right)}function e(a,b){return 0<b?new c(e(2*a-1,b-1),e(2*a,b-1),a):new c(null,null,a)}for(var f=0,g=4;7>=g;g+=1){for(var h=Math.max(6,g),k=e(0,h),l=4;l<=h;l+=2)for(var n=1<<h-l+4,p=1;p<=n;p++);f+=d(k)}if(-4!=f)throw"ERROR: bad result: expected -4 but got "+f;
