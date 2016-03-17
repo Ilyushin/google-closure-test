@@ -35,6 +35,9 @@ tests = []
 for fn in os.listdir(path_tests):
     if fn.lower().find('opt') == -1 and fn.lower().endswith('.js'):
         tests.append(TestFile(path_tests + '/' + fn))
+    else:
+        os.remove(path_tests + '/' + fn)
+
 
 for test_file in tests:
 
@@ -65,11 +68,17 @@ for test_file in tests:
 csvfile = open(path_results + '/result.csv', 'w+')
 csv_writer = csv.writer(csvfile, delimiter=' ', quoting=csv.QUOTE_NONE, escapechar=' ', quotechar='')
 csv_writer.writerow(['test', ';dec size(%)', ';dec time(%)'])
+all_time, all_size, amount = 0, 0, 0
+
 for test_file in tests:
     newStr = []
     newStr.append(test_file.file_name)
     newStr.append(';' + str(test_file.perc_dec_size))
     newStr.append(';' + str(test_file.perc_dec_time))
     csv_writer.writerow(newStr)
+    all_time += test_file.perc_dec_time
+    all_size += test_file.perc_dec_size
+    amount += 1
+csv_writer.writerow(['', ';'+str(all_size/amount), ';'+str(all_time/amount)])
 csvfile.close()
 print "Finish"
